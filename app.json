@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Your App Name",
+    "icon": "./app-icon/app.png",
+    "splash": {
+      "image": "../app-icon/app.png",
+      "backgroundColor": "#FEF9B0"
+    },
+    "version": "1.0.0",
+    "slug": "your-app-slug",
+    "sdkVersion": "31.0.0",
+    "ios": {
+      "bundleIdentifier": "com.star.taroTest"
+    },
+    "android": {
+      "package": "com.star.taroTest"
+    }
+  }
+}
