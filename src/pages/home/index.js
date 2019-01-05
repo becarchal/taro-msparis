@@ -11,8 +11,10 @@ import './index.scss';
   ...loading,
 }))
 export default class Index extends Component {
+  // 页面配置
   config = {
     navigationBarTitleText: '首页',
+    enablePullDownRefresh: true
   };
 
   componentDidMount = () => {
@@ -43,6 +45,12 @@ export default class Index extends Component {
       path: '/pages/home/index',
     }
   };
+  // Page 组件详细属性见 https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html
+  // 小程序下拉刷新
+  onPullDownRefresh () {
+    console.log('刷新数据')
+    Taro.stopPullDownRefresh() // 停止刷新
+  }
 
   // 小程序上拉加载
   onReachBottom() {

@@ -15,7 +15,7 @@ const dvaApp = dva.createApp({
 const store = dvaApp.getStore();
 
 class App extends Component {
-
+  // app全局配置
   config = {
     pages: [
       'pages/home/index',
