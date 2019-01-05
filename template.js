@@ -32,7 +32,7 @@ export default class ${titleCase(dirName)} extends Component {
 
   render() {
     return (
-      <View className="${dirName}-page">
+      <View className='${dirName}-page'>
         ${dirName}
       </View>
     )
@@ -41,7 +41,7 @@ export default class ${titleCase(dirName)} extends Component {
 `;
 
 // scss文件模版
-const scssTep = `@import "../../styles/mixin";
+const scssTep = `@import '../../styles/mixin';
 
 .${dirName}-page {
   @include wh(100%, 100%);

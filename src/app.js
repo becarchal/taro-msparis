@@ -1,9 +1,9 @@
 import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
+import { Provider } from '@tarojs/redux'
 import Home from './pages/home'
 import dva from './utils/dva'
 import models from './models'
-import { Provider } from '@tarojs/redux'
 
 import './styles/base.scss'
 
@@ -37,20 +37,20 @@ class App extends Component {
     },
     tabBar: {
       list: [{
-        pagePath: "pages/home/index",
-        text: "首页",
-        iconPath: "./images/tab/home.png",
-        selectedIconPath: "./images/tab/home-active.png"
+        pagePath: 'pages/home/index',
+        text: '首页',
+        iconPath: './images/tab/home.png',
+        selectedIconPath: './images/tab/home-active.png'
       }, {
-        pagePath: "pages/cart/index",
-        text: "衣袋",
-        iconPath: "./images/tab/cart.png",
-        selectedIconPath: "./images/tab/cart-active.png"
+        pagePath: 'pages/cart/index',
+        text: '衣袋',
+        iconPath: './images/tab/cart.png',
+        selectedIconPath: './images/tab/cart-active.png'
       },{
-        pagePath: "pages/user/index",
-        text: "我的",
-        iconPath: "./images/tab/user.png",
-        selectedIconPath: "./images/tab/user-active.png"
+        pagePath: 'pages/user/index',
+        text: '我的',
+        iconPath: './images/tab/user.png',
+        selectedIconPath: './images/tab/user-active.png'
       }],
       color: '#333',
       selectedColor: '#333',
@@ -65,9 +65,9 @@ class App extends Component {
 
   render() {
     return (<Provider store={store}>
-      <Home/>
+      <Home />
     </Provider>);
   }
 }
 
-Taro.render(<App/>, document.getElementById('app'))
+Taro.render(<App />, document.getElementById('app'))

@@ -1,8 +1,8 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Image, Button } from '@tarojs/components';
+import { connect } from '@tarojs/redux';
 import * as detailApi from './service';
 import MySwiper from '../../components/MySwiper';
-import { connect } from '@tarojs/redux';
 import './index.scss';
 
 @connect(({cart}) => ({
