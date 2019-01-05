@@ -35,7 +35,8 @@
     "no-param-reassign": [1],
     "no-underscore-dangle": [1],
     "react/no-string-refs": [1],
-    "no-alert": [0]
+    "no-alert": [0],
+    "taro/this-props-function": 0
   },
   "parser": "babel-eslint"
 }
