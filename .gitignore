@@ -12,3 +12,5 @@ npm-debug.log
 npm-debug.log.*
 selenium-debug.log
 .vscode
+
+yarn\.lock
