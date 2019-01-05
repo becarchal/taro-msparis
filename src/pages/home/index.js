@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text, Image } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
+// import { AtButton, AtInput, AtForm } from 'taro-ui' // taro-ui用法
 import MySwiper from '../../components/MySwiper';
 import GoodsList from '../../components/GoodsList';
 import './index.scss';
@@ -68,16 +69,26 @@ export default class Index extends Component {
   render() {
     const { banner, brands, products_list, effects } = this.props;
     return (
-      <View className="home-page">
+      <View className='home-page'>
+        {/* taro-ui用法 */}
+        {/* <AtForm>
+          <AtInput name='amount' title='支数' type='number' placeholder='每天吸烟支数' value={1} onChange={this.onAmount} />
+          <AtInput name='unitprice' title='单价' type='number' placeholder='香烟单价' value={1} onChange={this.onUnitprice} />
+          <AtInput name='unitamount' title='每包支数' type='number' placeholder='每包烟支数' value={1} onChange={this.onUnitamount} />
+          <View className='btn-item'>
+            <AtButton type='primary' onClick={this.onSubmit}>提交</AtButton>
+            <AtButton type='secondary' onClick={this.onBack}>返回</AtButton>
+          </View>
+        </AtForm> */}
         <MySwiper banner={banner} home />
-        <View className="nav-list">
+        <View className='nav-list'>
           { brands.map((item, index) => (
-            <View className="nav-item" key={index}>
-              <Image mode="widthFix" src={item.image_src}></Image>
+            <View className='nav-item' key={index}>
+              <Image mode='widthFix' src={item.image_src}></Image>
             </View>
           ))}
         </View>
-        <Text className="recommend">为你推荐</Text>
+        <Text className='recommend'>为你推荐</Text>
         <GoodsList list={products_list} loading={effects['home/product']} />
       </View>
     )
