@@ -1,6 +1,7 @@
 /dist
 .temp/
 .rn_temp/
+.expo/
 node_modules/
 package-lock.json
 .idea
@@ -11,3 +12,5 @@ npm-debug.log
 npm-debug.log.*
 selenium-debug.log
 .vscode
+
+yarn\.lock

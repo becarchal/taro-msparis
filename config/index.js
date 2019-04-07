@@ -25,6 +25,14 @@ const config = {
   weapp: {
     module: {
       postcss: {
+        // css modules 功能开关与相关配置
+        // cssModules: {
+        //   enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+        //   config: {
+        //     namingPattern: 'module', // 转换模式，取值为 global/module，下文详细说明
+        //     generateScopedName: '[name]__[local]___[hash:base64:5]'
+        //   }
+        // },
         autoprefixer: {
           enable: true
         },
@@ -42,11 +50,20 @@ const config = {
     staticDirectory: 'static',
     module: {
       postcss: {
+        // css modules 功能开关与相关配置
+        // cssModules: {
+        //   enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+        //   config: {
+        //     namingPattern: 'module', // 转换模式，取值为 global/module，下文详细说明
+        //     generateScopedName: '[name]__[local]___[hash:base64:5]'
+        //   }
+        // },
         autoprefixer: {
           enable: true
         }
       }
-    }
+    },
+    esnextModules: ['taro-ui'], // 由于引用 node_modules 的模块，默认不会编译，所以需要额外给 H5 配置 esnextModules
   }
 }
 
