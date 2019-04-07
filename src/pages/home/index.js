@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text, Image } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
-// import { AtButton, AtInput, AtForm } from 'taro-ui' // taro-ui用法
+// import { AtButton, AtInput, AtForm, AtTabBar } from 'taro-ui' // taro-ui用法
 import MySwiper from '../../components/MySwiper';
 import GoodsList from '../../components/GoodsList';
 import './index.scss';
@@ -90,6 +90,16 @@ export default class Index extends Component {
         </View>
         <Text className='recommend'>为你推荐</Text>
         <GoodsList list={products_list} loading={effects['home/product']} />
+        {/* <AtTabBar
+          fixed
+          tabList={[
+            { title: '待办事项', text: 8 },
+            { title: '拍照' },
+            { title: '通讯录', dot: true }
+          ]}
+          onClick={this.handleClick.bind(this)}
+          current={this.state.current}
+        /> */}
       </View>
     )
   }
