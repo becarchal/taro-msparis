@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Image, Button, Text } from '@tarojs/components';
-import ClothingsItem from '../../components/ClothingsItem';
 import { connect } from '@tarojs/redux';
+import ClothingsItem from '../../components/ClothingsItem';
 import './index.scss';
 
 @connect(({cart}) => ({
